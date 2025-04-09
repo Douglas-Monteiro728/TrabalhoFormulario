@@ -80,9 +80,9 @@
             <div class="mb-3">
                 <input type="text" name="telefone" class="form-control" placeholder="Digite seu telefone" value="<?= $editando ? $aluno['telefone'] : '' ?>">
             </div>
-            <button type="submit" class="btn btn-success"><?= $editando ? "Atualizar" : "Salvar" ?></button>
+            <button type="submit" class="btn btn-outline-success"><?= $editando ? "Atualizar" : "Salvar" ?></button>
             <?php if ($editando): ?>
-                <a href="<?= $_SERVER['PHP_SELF'] ?>" class="btn btn-secondary">Cancelar</a>
+                <a href="<?= $_SERVER['PHP_SELF'] ?>" class="btn btn-outline-secondary">Cancelar</a>
             <?php endif; ?>
         </form>
 
@@ -108,8 +108,8 @@
                     <td><?= $row['email'] ?></td>
                     <td><?= $row['telefone'] ?></td>
                     <td>
-                        <a href="?edit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
-                        <a href="?delete=<?= $row['id'] ?>" class="btn btn-danger btn-sm" >Excluir</a>
+                        <a href="?edit=<?= $row['id'] ?>" class="btn btn-outline-warning">Editar</a>
+                        <a href="?delete=<?= $row['id'] ?>" class="btn btn-outline-danger" >Excluir</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
