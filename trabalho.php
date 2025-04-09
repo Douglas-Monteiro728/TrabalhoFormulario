@@ -60,13 +60,14 @@
     ?>
 
     <!DOCTYPE html>
-    <html>
+    <html lang="pt">
     <head>
+        <meta charset="UTF-8">
         <title>Cadastro de Alunos (PHP)</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
-    <body style="background-color:rgb(232, 232, 232);" class="container mt-5">
-        <h2><?= $editando ? "Editar Aluno" : "Cadastrar Aluno" ?></h2>
+    <body style="background-color:rgb(226, 226, 226);" class="container mt-5">
+        <h2 class="text-primary"><?= $editando ? "Editar Aluno" : "Cadastrar Aluno" ?></h2>
         <form method="POST" class="mb-4">
             <?php if ($editando): ?>
                 <input type="hidden" name="id" value="<?= $aluno['id'] ?>">
